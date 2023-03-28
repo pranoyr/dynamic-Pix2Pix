@@ -41,8 +41,14 @@ class Trainer():
 	def prepare_data(self):
 		transform = transforms.Compose([
 					transforms.Resize((self.cfg.DATA.IMG_SIZE, self.cfg.DATA.IMG_SIZE)),
-				   	transforms.ToTensor()
+				   	transforms.ToTensor(),
+					transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
 				])
+		
+		self.inverse_transform = transforms.Normalize(
+					mean=[-0.5 / 0.5, -0.5 / 0.5, -0.5 / 0.5],
+					std=[1 / 0.5, 1 / 0.5, 1 / 0.5]
+					)
 
 
 		train_dataset = ImageDataset(self.cfg.DATA.ROOT_DIR, transforms=transform, mode='train')
@@ -87,11 +93,11 @@ class Trainer():
 		with torch.no_grad():
 			fake_B = self.G(real_A)
 
-		realA = real_A[0].permute(1,2,0).detach().cpu().numpy() 
-		fake_B = fake_B[0].permute(1,2,0).detach().cpu().numpy() 
+		realA = self.inverse_transform(real_A[0]).permute(1,2,0).detach().cpu().numpy() 
+		fake_B = self.inverse_transform(fake_B[0]).permute(1,2,0).detach().cpu().numpy() 
 		out = np.concatenate((realA, fake_B), axis=1)
-		cv2.imshow("out", out)
-		cv2.waitKey(1)
+		output_path = self.cfg.OUTPUT_DIR + f'/result_{self.cfg.EXP_NAME}.png'
+		cv2.imwrite(output_path, out*255)
 
 	
 	def data_cyc(self, batch):
