@@ -1,0 +1,32 @@
+MODEL : 
+      NAME : DynamicPix2Pix
+
+      NOISE_LOSS_WEIGHT : 1.0
+      PIXEL_LOSS_WEIGHT : 100
+
+DATA : 
+      ROOT_DIR  : data/maps
+      IMG_SIZE : 256
+      BATCH_SIZE : 8
+
+
+TRAIN :
+      EPOCHS : 200
+      WEIGHT_DECAY : 0.0
+      BASE_LR : 0.0002
+      DISTRIBUTED : False
+      LR_SCHEDULER : 
+                  NAME : linear
+                  DECAY_EPOCHS : 100
+      OPTIMIZER :
+                  NAME : adam
+
+
+EXP_NAME : exp2
+OUTPUT_DIR : outputs
+CKPT_DIR :  checkpoints
+
+LOG_FREQ : 1
+SAVE_FREQ : 50
+
+
