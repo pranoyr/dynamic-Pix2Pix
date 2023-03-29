@@ -28,5 +28,3 @@ CKPT_DIR :  checkpoints
 
 LOG_FREQ : 1
 SAVE_FREQ : 50
-
-
