@@ -254,7 +254,6 @@ class Trainer():
 
             if epoch % self.cfg.SAVE_FREQ == 0:
                 # save model
-                # checkpoint_iter10_trial1.pth
                 checkpoint_name = self.cfg.CKPT_DIR + \
                     f"/checkpoint_epoch{epoch}_{self.cfg.EXP_NAME}.pth"
                 self.save_checkpoint(epoch, checkpoint_name,  is_best=True)
