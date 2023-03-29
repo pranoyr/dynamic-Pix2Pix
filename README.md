@@ -9,7 +9,7 @@ Implementation of Dynamic-Pix2Pix https://arxiv.org/pdf/2211.08570.pdf
 
 ## Download Dataset 
 ```
-scripts/download_dataset.sh
+scripts/maps.sh
 ```
 
 ## Train
