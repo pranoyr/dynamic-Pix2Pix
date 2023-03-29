@@ -7,6 +7,11 @@ Implementation of Dynamic-Pix2Pix https://arxiv.org/pdf/2211.08570.pdf
 * Python 3
 
 
+## Download Dataset 
+```
+scripts/download_dataset.sh
+```
+
 ## Train
 ```
 python main.py --cfg cfg/exp1.yaml
