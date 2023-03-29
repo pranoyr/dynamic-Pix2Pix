@@ -10,7 +10,7 @@ Implementation of Dynamic-Pix2Pix https://arxiv.org/pdf/2211.08570.pdf
 
 ## Download Dataset 
 ```
-scripts/edge2shoes.sh
+scripts/edges2shoes.sh
 ```
 
 ## Train
