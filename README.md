@@ -3,8 +3,9 @@ Implementation of Dynamic-Pix2Pix https://arxiv.org/pdf/2211.08570.pdf
 
 # Getting Started
 ## Prerequisites
-* PyTorch 
-* Python 3
+* torchvision  0.15.1
+* torch 2.0.0
+* Python 3.10.6
 
 
 ## Download Dataset 
