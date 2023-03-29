@@ -5,7 +5,7 @@ MODEL :
       PIXEL_LOSS_WEIGHT : 100
 
 DATA : 
-      ROOT_DIR  : data/maps
+      ROOT_DIR  : data/edges2shoes
       IMG_SIZE : 256
       BATCH_SIZE : 8
 
