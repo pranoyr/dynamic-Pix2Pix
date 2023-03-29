@@ -1,8 +1,6 @@
 import torch.nn as nn
 import torch.nn.functional as F
 import torch
-from collections import OrderedDict
-
 
 
 def weights_init_normal(m):
@@ -68,12 +66,10 @@ class GeneratorUNet(nn.Module):
         self.down7 = UNetDown(512, 512, dropout=0.5)
         self.down8 = UNetDown(512, 512, normalize=False, dropout=0.5)
 
-        # (512, 1, 1) --> (1,4,4) --> (512, 1, 1)
+
         self.bottleneck = nn.Sequential(
             nn.Conv2d(512, 16, 1),
-            # reshape from (16,1,1) to (1, 4, 4)
             nn.PixelShuffle(4),
-            #  (1, 4, 4) --> (512, 1, 1)
             nn.Conv2d(1, 512, 4),
         
         )
