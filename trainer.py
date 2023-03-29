@@ -96,7 +96,7 @@ class Trainer():
 		realA = self.inverse_transform(real_A[0]).permute(1,2,0).detach().cpu().numpy() 
 		fake_B = self.inverse_transform(fake_B[0]).permute(1,2,0).detach().cpu().numpy() 
 		out = np.concatenate((realA, fake_B), axis=1)
-		output_path = self.cfg.OUTPUT_DIR + f'/result_{self.cfg.EXP_NAME}.png'
+		output_path = self.cfg.OUTPUT_DIR + f'/test_{self.cfg.EXP_NAME}.png'
 		cv2.imwrite(output_path, out*255)
 
 	

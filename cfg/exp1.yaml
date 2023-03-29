@@ -1,7 +1,7 @@
 MODEL : 
       NAME : DynamicPix2Pix
 
-      NOISE_LOSS_WEIGHT : 0.1
+      NOISE_LOSS_WEIGHT : 1.0
       PIXEL_LOSS_WEIGHT : 100
 
 DATA : 
@@ -22,7 +22,7 @@ TRAIN :
                   NAME : adam
 
 
-EXP_NAME : exp1
+EXP_NAME : exp2
 OUTPUT_DIR : outputs
 CKPT_DIR :  checkpoints
 
