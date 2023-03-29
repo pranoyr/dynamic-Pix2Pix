@@ -70,9 +70,7 @@ class GeneratorUNet(nn.Module):
         self.bottleneck = nn.Sequential(
             nn.Conv2d(512, 16, 1),
             nn.PixelShuffle(4),
-            nn.Conv2d(1, 512, 4),
-        
-        )
+            nn.Conv2d(1, 512, 4))
 
         self.up1 = UNetUp(512, 512, dropout=0.5)
         self.up2 = UNetUp(1024, 512, dropout=0.5)
@@ -86,7 +84,7 @@ class GeneratorUNet(nn.Module):
             nn.Upsample(scale_factor=2),
             nn.ZeroPad2d((1, 0, 1, 0)),
             nn.Conv2d(128, out_channels, 4, padding=1),   
-            nn.Tanh(),
+            nn.Tanh()
         )
 
     def forward(self, x, freeze_encoder=False):
