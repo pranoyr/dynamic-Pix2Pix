@@ -13,7 +13,7 @@ import argparse
 from models import GeneratorUNet
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--img_path", type=str, default="images/14.jpg", help="path to image")
+parser.add_argument("--img_path", type=str, help="path to image")
 parser.add_argument("--checkpoint", type=str, default="checkpoints/final_weights_exp1.pth", help="path to checkpoint")
 args = parser.parse_args()
 
