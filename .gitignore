@@ -2,3 +2,5 @@ wandb
 *.pth
 data
 *.pyc
+*.png
+*.jpg
