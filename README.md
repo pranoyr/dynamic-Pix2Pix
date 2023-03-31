@@ -6,9 +6,9 @@
 
 ## Table of Contents
   * [License](#license)
-  * [Download dataset](#description)
-  * [Train](#news)
-  * [Inference](#installation)
+  * [Download dataset](#Download-dataset)
+  * [Train](#Train)
+  * [Inference](#Inference)
 
 
 ## Download dataset 
