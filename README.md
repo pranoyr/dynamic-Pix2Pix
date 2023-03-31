@@ -1,5 +1,7 @@
-# Dynamic-Pix2Pix 
-Implementation of Dynamic-Pix2Pix https://arxiv.org/pdf/2211.08570.pdf
+
+## Dynamic-Pix2Pix: Noise Injected cGAN for Modeling Input and Target Domain Joint Distributions with Limited Training Data
+
+[[Paper](https://arxiv.org/pdf/2211.08570.pdf)] 
 
 # Getting Started
 ## Prerequisites
