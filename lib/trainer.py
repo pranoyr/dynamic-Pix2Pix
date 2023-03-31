@@ -5,11 +5,11 @@ import os
 import sys
 
 import torchvision.transforms as transforms
-from dataset import ImageDataset
+from .dataset import ImageDataset
 from torch.nn.functional import mse_loss as criterion_GAN
 from torch.nn.functional import l1_loss as criterion_pixelwise
 import cv2
-from models import weights_init_normal
+from .models import weights_init_normal
 
 
 class Trainer():

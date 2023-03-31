@@ -2,14 +2,12 @@ import torch
 import utils
 
 import random
-from config import get_config
-from models import *
 
 import os
 import numpy as np
 import wandb
 import argparse
-from trainer import Trainer
+from lib import GeneratorUNet, Discriminator, Trainer, get_config, utils
 
 
 	
